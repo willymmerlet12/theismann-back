@@ -15,8 +15,8 @@ const app = express();
 mongoose.connect(process.env.MONGODB_URI);
 
 const s3 = new AWS.S3({
-  accessKeyId: "AKIA6HNVHSCQROUZUDKT",
-  secretAccessKey: "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",
+  accessKeyId: process.env.ACCESS_KEY,
+  secretAccessKey: process.env.SECRET_KEY,
 });
 
 const uploadAudio = (filename, bucketname, file) => {
