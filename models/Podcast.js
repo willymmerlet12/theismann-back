@@ -6,7 +6,7 @@ const Podcast = mongoose.model("Podcast", {
   podcast_date: String,
   podcast_length: String,
   podcast_description: String,
-  podcast_file: Array,
+  podcast_file: { type: mongoose.Schema.Types.Mixed, default: {} },
 });
 
 module.exports = Podcast;
