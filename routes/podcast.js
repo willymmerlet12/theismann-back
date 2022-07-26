@@ -12,5 +12,13 @@ router.post("/post", async (req, res) => {
             date,
             description,
         } = req.fields
+
+        const newPodcast = new Podcast({
+            guest_name: name,
+            podcast_title: title,
+            podcast_date: date,
+            podcast_length: length,
+            podcast_description: description
+        })
      }
 });
