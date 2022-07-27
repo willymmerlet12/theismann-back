@@ -86,6 +86,6 @@ app.all("*", (req, res) => {
   res.status(404).json({ message: error.message });
 });
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(PORT, () => {
   console.log("Server started");
 });
