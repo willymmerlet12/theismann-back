@@ -20,6 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 
 mongoose.connect(process.env.MONGODB_URI);
 
